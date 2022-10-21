@@ -14,6 +14,7 @@
 		337E5494290283AE005465C2 /* LearnAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E5493290283AE005465C2 /* LearnAPITests.swift */; };
 		337E549E290283AE005465C2 /* LearnAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E549D290283AE005465C2 /* LearnAPIUITests.swift */; };
 		337E54A0290283AE005465C2 /* LearnAPIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E549F290283AE005465C2 /* LearnAPIUITestsLaunchTests.swift */; };
+		337E54AD29029116005465C2 /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E54AC29029116005465C2 /* StationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		337E5499290283AE005465C2 /* LearnAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		337E549D290283AE005465C2 /* LearnAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnAPIUITests.swift; sourceTree = "<group>"; };
 		337E549F290283AE005465C2 /* LearnAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		337E54AC29029116005465C2 /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				337E5484290283AC005465C2 /* ContentView.swift */,
 				337E5486290283AE005465C2 /* Assets.xcassets */,
 				337E5488290283AE005465C2 /* Preview Content */,
+				337E54AC29029116005465C2 /* StationModel.swift */,
 			);
 			path = LearnAPI;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				337E5485290283AC005465C2 /* ContentView.swift in Sources */,
+				337E54AD29029116005465C2 /* StationModel.swift in Sources */,
 				337E5483290283AC005465C2 /* LearnAPIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
