@@ -2,6 +2,7 @@ import Foundation
 
 struct StationModel: Codable {
     var stations: [Station]
+    
 }
 
 struct Station: Identifiable, Codable {
@@ -12,6 +13,7 @@ struct Station: Identifiable, Codable {
     var coordinates: Coordinates
     var rating: Double
     var paid: Bool
+    
 }
 
 struct Coordinates: Codable {

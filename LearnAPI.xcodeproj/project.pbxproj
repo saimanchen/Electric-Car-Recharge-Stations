@@ -46,6 +46,7 @@
 		337E549D290283AE005465C2 /* LearnAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnAPIUITests.swift; sourceTree = "<group>"; };
 		337E549F290283AE005465C2 /* LearnAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		337E54AC29029116005465C2 /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
+		337E54AE2902A6D7005465C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +97,7 @@
 		337E5481290283AC005465C2 /* LearnAPI */ = {
 			isa = PBXGroup;
 			children = (
+				337E54AE2902A6D7005465C2 /* Info.plist */,
 				337E5482290283AC005465C2 /* LearnAPIApp.swift */,
 				337E5484290283AC005465C2 /* ContentView.swift */,
 				337E5486290283AE005465C2 /* Assets.xcassets */,
@@ -424,6 +426,7 @@
 				DEVELOPMENT_TEAM = 8Z2SQL9F4K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LearnAPI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -453,6 +456,7 @@
 				DEVELOPMENT_TEAM = 8Z2SQL9F4K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LearnAPI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

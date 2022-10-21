@@ -1,31 +1,44 @@
-//
-//  ContentView.swift
-//  LearnAPI
-//
-//  Created by Saiman Chen on 2022-10-21.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @State var stations = [Station]()
+    
+    func fetchStations() async {
+        guard let url = URL(string: "http://gaddr.co/ios/stations") else { return }
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            
+            if let decodedResponse = try? JSONDecoder().decode(StationModel.self, from: data) {
+                stations = decodedResponse.stations
+            }
+            
+        } catch {
+            print("Error when retrieving data!")
+        }
+    }
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ScrollView {
+            ForEach(stations) { station in
+                StationView(station: station)
+            }
+        }
+        .task {
+            await fetchStations()
+            
         }
         .padding()
     }
 }
 
 struct StationView: View {
+    var station: Station
     var body: some View {
         ZStack(alignment: .leading) {
             // background image
             AsyncImage(
                 url:
-                    URL(string: "https://resources.news.e.abb.com/attachments/published/82941/en-US/3081E72A5C7C/ABB_launches_Terra_360_usecase_refueling_station_station_render_dpi.jpg"),
+                    URL(string: station.image),
                 
                 content: { image in
                     image.resizable().opacity(0.8)
@@ -46,23 +59,24 @@ struct StationView: View {
             
             VStack(alignment: .leading) {
                 Spacer()
-                Text("Title")
-                    .font(.largeTitle)
+                Text(station.title)
+                    .font(.title)
                     .bold()
-                Text("... description")
+                Text(station.description)
                     .font(.caption)
             }.foregroundColor(.white).padding()
         }
         .frame(width: 350, height: 250)
         .background(.black)
         .cornerRadius(10)
-        .padding()
+        .padding(.top)
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        //        ContentView()
-        StationView()
+                ContentView()
+//        StationView()
     }
 }
