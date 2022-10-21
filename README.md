@@ -8,8 +8,5 @@
 2. Import it in XCode 14
 3. Start the active scheme (Play button)
 
-<h2>Contributing</h2>
-Mention pull requests. Link to an example and/or put it down here
-
 <h2>Project status</h2>
 Work in progress
