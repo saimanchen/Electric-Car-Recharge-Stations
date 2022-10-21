@@ -2,23 +2,28 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var stationList = StationList()
-
+    
     var body: some View {
-        ScrollView {
-            ForEach(stationList.stations) { station in
-                StationView(station: station)
+        NavigationStack(){
+            TabView {
+                StationListView(stationList: stationList)
+                    .tabItem {
+                        Image(systemName: "list.dash")
+                        Text("List")
+                    }
+                MapView(stationList: stationList)
+                    .tabItem{
+                        Image(systemName: "map.fill")
+                        Text("Map")
+                    }
             }
-        }
-        .task {
-            await stationList.fetchStations()
-            
-        }
-        .padding()
+            .navigationBarTitleDisplayMode(.large)
+            .frame(alignment: .center)
+        }.ignoresSafeArea()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    @Binding var station: Station
     static var previews: some View {
         ContentView()
     }

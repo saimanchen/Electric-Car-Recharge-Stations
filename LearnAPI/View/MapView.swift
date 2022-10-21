@@ -10,17 +10,8 @@ struct MapView: View {
             latitude: 59.32635576802364,
             longitude: 18.00805075638511),
         span: MKCoordinateSpan(
-            latitudeDelta: 10.0,
-            longitudeDelta: 10.0))
-    
-    @State var places = [
-        Place(name: "STI",
-              latitude: 59.309699281164114,
-              longitude: 18.02152349684837),
-        Place(name: "Sätra",
-              latitude: 59.28483398375977,
-              longitude: 17.923229012192998)
-    ]
+            latitudeDelta: 0.2,
+            longitudeDelta: 0.2))
     
     var body: some View {
         
@@ -41,7 +32,9 @@ struct MapView: View {
                     }
                 }
             })
-        }.task {
+        }
+        .ignoresSafeArea()
+        .task {
             await stationList.fetchStations()
         }
     }

@@ -20,7 +20,6 @@ struct StationListView: View {
             await stationList.fetchStations()
             
         }
-        .padding()
     }
 }
 
