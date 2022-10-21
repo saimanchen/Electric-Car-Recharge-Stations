@@ -13,6 +13,9 @@ struct MapView: View {
             latitudeDelta: 0.2,
             longitudeDelta: 0.2))
     
+    @State var selectedStation: Station?
+    @State var showSheet = false
+    
     var body: some View {
         
         Map(coordinateRegion: $region,
@@ -26,14 +29,19 @@ struct MapView: View {
                         Circle()
                             .fill(.blue)
                             .frame(width: 45, height: 45)
-                        Image(systemName: "house")
+                        Image(systemName: "bolt")
                             .resizable()
                             .frame(width: 25, height: 25)
+                            
+                    }.onTapGesture {
+                        selectedStation = station
+                        showSheet = true
                     }
                 }
             })
+        }.sheet(isPresented: $showSheet) {
+            PinPopUpView(selectedStation: $selectedStation).presentationDetents([.fraction(0.3)])
         }
-        .ignoresSafeArea()
         .task {
             await stationList.fetchStations()
         }

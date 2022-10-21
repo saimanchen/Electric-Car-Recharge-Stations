@@ -17,7 +17,8 @@ struct ContentView: View {
                         Text("Map")
                     }
             }
-            .navigationBarTitleDisplayMode(.large)
+            .navigationTitle("EV Charging Stations")
+            .navigationBarTitleDisplayMode(.inline)
             .frame(alignment: .center)
         }.ignoresSafeArea()
     }

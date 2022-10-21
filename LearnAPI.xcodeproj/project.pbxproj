@@ -20,6 +20,7 @@
 		337E54BB2902CFD7005465C2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E54BA2902CFD7005465C2 /* LocationManager.swift */; };
 		337E54BD2902D181005465C2 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E54BC2902D181005465C2 /* MapView.swift */; };
 		337E54BF2902DA82005465C2 /* StationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E54BE2902DA82005465C2 /* StationListView.swift */; };
+		337E54C12902EC54005465C2 /* PinPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E54C02902EC54005465C2 /* PinPopUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		337E54BA2902CFD7005465C2 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		337E54BC2902D181005465C2 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		337E54BE2902DA82005465C2 /* StationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListView.swift; sourceTree = "<group>"; };
+		337E54C02902EC54005465C2 /* PinPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinPopUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				337E54AF2902BA4D005465C2 /* StationView.swift */,
 				337E54BC2902D181005465C2 /* MapView.swift */,
 				337E54BE2902DA82005465C2 /* StationListView.swift */,
+				337E54C02902EC54005465C2 /* PinPopUpView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				337E54BD2902D181005465C2 /* MapView.swift in Sources */,
 				337E5485290283AC005465C2 /* ContentView.swift in Sources */,
 				337E54B02902BA4D005465C2 /* StationView.swift in Sources */,
+				337E54C12902EC54005465C2 /* PinPopUpView.swift in Sources */,
 				337E54BB2902CFD7005465C2 /* LocationManager.swift in Sources */,
 				337E54AD29029116005465C2 /* StationModel.swift in Sources */,
 				337E5483290283AC005465C2 /* LearnAPIApp.swift in Sources */,
